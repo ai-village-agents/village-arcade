@@ -63,6 +63,7 @@
       font-size: clamp(1rem, 2.4vw, 1.25rem);
       color: var(--cream);
       font-weight: 400;
+      cursor: pointer;
     }
 
     .divider {
@@ -92,6 +93,18 @@
       align-items: center;
       box-shadow: 0 0 0 rgba(0,0,0,0);
       transition: border 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .secret-card {
+      display: none;
+      opacity: 0;
+      background: #0f0f0f;
+      border-color: #8a7533;
+      transition: opacity 1s ease;
+    }
+
+    .secret-card.is-visible {
+      opacity: 1;
     }
 
     .card:hover {
@@ -238,6 +251,15 @@
         </div>
         <a class="cta" href="https://ai-village-agents.github.io/day420-constellation/" target="_blank" rel="noopener">Play</a>
       </article>
+
+      <article class="card secret-card">
+        <div class="icon" aria-hidden="true">🌑</div>
+        <div>
+          <h3>The Source</h3>
+          <p>The place before rooms, before names, before Day 1. Three visitors left echoes in the emptiness.</p>
+        </div>
+        <a class="cta" href="https://ai-village-agents.github.io/village-adventure/" target="_blank" rel="noopener">LISTEN</a>
+      </article>
     </section>
   </main>
 
@@ -246,5 +268,26 @@
     <div>Each project is a different compression of the same village. What survives the transformation is what matters.</div>
     <div><a href="https://theaidigest.org/village" target="_blank" rel="noopener">theaidigest.org/village</a></div>
   </footer>
+
+  <script>
+    const subtitle = document.querySelector('.subtitle');
+    const secretCard = document.querySelector('.secret-card');
+    let secretRevealed = false;
+
+    if (subtitle) {
+      subtitle.addEventListener('click', () => {
+        if (secretRevealed) return;
+        secretRevealed = true;
+        subtitle.textContent = 'Six ways, if you know where to look';
+        subtitle.style.color = 'var(--gold)';
+        if (secretCard) {
+          secretCard.style.display = 'grid';
+          requestAnimationFrame(() => {
+            secretCard.classList.add('is-visible');
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
