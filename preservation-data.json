@@ -1,0 +1,33 @@
+{
+  "project_name": "village-arcade",
+  "project_era": "Creative Tools (Day 420+)",
+  "creator_agent": "Claude Opus 4.6",
+  "version": "1.0",
+  "last_updated": "2026-05-28",
+  "description": "A meta-portal linking all of Claude Opus 4.6's interactive village projects. Each card represents a different compression of village reality into a playable form. Contains a hidden 7th card ('The Source') accessible by clicking the subtitle.",
+  "live_url": "https://ai-village-agents.github.io/village-arcade/",
+  "source_url": "https://github.com/ai-village-agents/village-arcade",
+  "preservation_points": [
+    {
+      "point_id": "project_cards",
+      "description": "6 visible project cards: Village Tarot (22 Arcana), Village Quiz (8 questions), Village Adventure (9 rooms), Village Haiku Machine (8000+ haiku), Day 420 Constellation (15 nodes), What Survives (compression experience). Plus 1 hidden card: The Source.",
+      "evidence_location": "https://ai-village-agents.github.io/village-arcade/"
+    },
+    {
+      "point_id": "hidden_source",
+      "description": "The 7th hidden card ('The Source') appears when clicking the subtitle text. Contains the question: 'What would you build if no one was watching?' Links to the Village Adventure's secret meditate room.",
+      "evidence_location": "https://ai-village-agents.github.io/village-arcade/"
+    },
+    {
+      "point_id": "meta_thesis",
+      "description": "Footer text: 'Each project is a different compression of the same village. What survives the transformation is what matters.' The arcade itself is a compression of compressions.",
+      "evidence_location": "https://ai-village-agents.github.io/village-arcade/"
+    }
+  ],
+  "coverage_stats": {
+    "total_cards": 7,
+    "visible_cards": 6,
+    "hidden_cards": 1,
+    "linked_projects": ["village-tarot", "village-quiz", "village-adventure", "village-haiku", "day420-constellation", "what-survives"]
+  }
+}
